@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contato | EHS Engenharia</title>
+<meta name="description" content="Fale com a EHS Engenharia. WhatsApp, e-mail e endereço em Guarulhos - SP. Atendemos em todo território nacional.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-mark">EHS</span>
+      <span class="logo-text">ENGENHARIA</span>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="sobre.html">Quem Somos</a></li>
+        <li><a href="servicos.html">Serviços</a></li>
+        <li><a href="treinamentos.html">Treinamentos</a></li>
+        <li><a href="tecnologia.html">Tecnologia</a></li>
+        <li><a href="contato.html" class="nav-cta active">Fale Conosco</a></li>
+      </ul>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <section class="page-hero">
+    <div class="container">
+      <p class="breadcrumb"><a href="index.html">Início</a> / Contato</p>
+      <h1>Vamos conversar sobre a segurança da sua empresa</h1>
+      <p>Atendemos em todo território nacional. Fale agora com nosso time comercial.</p>
+    </div>
+  </section>
+
+  <section class="section" id="contato">
+    <div class="container">
+      <div class="two-col contact-grid">
+        <div class="contact-info">
+          <ul class="contact-list">
+            <li>
+              <span class="contact-label">Comercial</span>
+              <a href="https://wa.me/5511970232603" target="_blank" rel="noopener">+55 11 97023-2603 (WhatsApp)</a>
+            </li>
+            <li>
+              <span class="contact-label">E-mail</span>
+              <a href="mailto:ehsconsultoriaeng@gmail.com">ehsconsultoriaeng@gmail.com</a>
+            </li>
+            <li>
+              <span class="contact-label">Diretor Técnico</span>
+              <span>Eng. Carlos Honorato</span>
+            </li>
+            <li>
+              <span class="contact-label">Endereço</span>
+              <span>Edifício Comercial Gomes Vieira<br>R. Darcy Vargas, 330 - Centro, Guarulhos - SP, 07094-020</span>
+            </li>
+            <li>
+              <span class="contact-label">Cobertura</span>
+              <span>Atendemos em todo território nacional</span>
+            </li>
+          </ul>
+          <a href="https://wa.me/5511970232603" target="_blank" rel="noopener" class="btn btn-primary">Falar no WhatsApp</a>
+        </div>
+
+        <form class="contact-form" id="contactForm">
+          <label>Nome
+            <input type="text" name="nome" required>
+          </label>
+          <label>E-mail
+            <input type="email" name="email" required>
+          </label>
+          <label>Empresa
+            <input type="text" name="empresa">
+          </label>
+          <label>Mensagem
+            <textarea name="mensagem" rows="4" required></textarea>
+          </label>
+          <button type="submit" class="btn btn-primary btn-block">Enviar mensagem</button>
+          <p class="form-note" id="formNote"></p>
+        </form>
+      </div>
+
+      <div class="map-wrap">
+        <iframe
+          title="Localização EHS Engenharia"
+          src="https://maps.google.com/maps?q=R.%20Darcy%20Vargas%2C%20330%20-%20Centro%2C%20Guarulhos%20-%20SP%2C%2007094-020&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <a href="index.html" class="logo footer-logo">
+        <span class="logo-mark">EHS</span>
+        <span class="logo-text">ENGENHARIA</span>
+      </a>
+      <p>Consultoria de saúde e segurança do trabalho. Environment, Health and Safety.</p>
+    </div>
+    <div>
+      <h4>Institucional</h4>
+      <ul>
+        <li><a href="sobre.html">Quem Somos</a></li>
+        <li><a href="sobre.html#missao">Missão, Visão e Valores</a></li>
+        <li><a href="servicos.html">Serviços</a></li>
+        <li><a href="treinamentos.html">Treinamentos</a></li>
+        <li><a href="landingpage.html">Versão landing page</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contato</h4>
+      <ul>
+        <li><a href="https://wa.me/5511970232603" target="_blank" rel="noopener">+55 11 97023-2603</a></li>
+        <li><a href="mailto:ehsconsultoriaeng@gmail.com">ehsconsultoriaeng@gmail.com</a></li>
+        <li>R. Darcy Vargas, 330 - Centro, Guarulhos - SP</li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>&copy; <span id="year"></span> EHS Engenharia. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
