@@ -903,7 +903,8 @@ img {
 
 /* ===== NAV ACTIVE ===== */
 .main-nav a.active {
-  color: #fff;
+  color: var(--header-text);
+  opacity: 1;
   position: relative;
 }
 
