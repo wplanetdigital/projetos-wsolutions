@@ -4,8 +4,12 @@
   const themePanelClose = document.getElementById('themePanelClose');
   const colorInputs = document.querySelectorAll('.color-input');
   const resetBtn = document.getElementById('resetTheme');
+  const logoOptions = document.querySelectorAll('.logo-option');
+  const logoImgs = document.querySelectorAll('.logo-img');
 
   const STORAGE_KEY = 'ehs-theme-customization';
+  const LOGO_STORAGE_KEY = 'ehs-logo-customization';
+  const DEFAULT_LOGO = 'media/logos/logo-light-v.png';
 
   const defaults = {
     '--navy': '#0A2342',
@@ -65,6 +69,23 @@
     saveTheme();
   };
 
+  const applyLogo = (logoPath) => {
+    logoImgs.forEach(img => { img.src = logoPath; });
+    logoOptions.forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.logo === logoPath);
+    });
+  };
+
+  const selectLogo = (logoPath) => {
+    applyLogo(logoPath);
+    localStorage.setItem(LOGO_STORAGE_KEY, logoPath);
+  };
+
+  const loadSavedLogo = () => {
+    const saved = localStorage.getItem(LOGO_STORAGE_KEY) || DEFAULT_LOGO;
+    applyLogo(saved);
+  };
+
   const resetTheme = () => {
     Object.entries(defaults).forEach(([varName, value]) => {
       document.documentElement.style.setProperty(varName, value);
@@ -72,6 +93,7 @@
       if (input) input.value = value;
     });
     localStorage.removeItem(STORAGE_KEY);
+    selectLogo(DEFAULT_LOGO);
   };
 
   themeToggle.addEventListener('click', togglePanel);
@@ -91,9 +113,14 @@
 
   resetBtn.addEventListener('click', resetTheme);
 
+  logoOptions.forEach(btn => {
+    btn.addEventListener('click', () => selectLogo(btn.dataset.logo));
+  });
+
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') closePanel();
   });
 
   loadSavedTheme();
+  loadSavedLogo();
 })();
