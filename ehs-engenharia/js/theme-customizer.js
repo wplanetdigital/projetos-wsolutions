@@ -5,11 +5,11 @@
   const colorInputs = document.querySelectorAll('.color-input');
   const resetBtn = document.getElementById('resetTheme');
   const logoOptions = document.querySelectorAll('.logo-option');
-  const logoImgs = document.querySelectorAll('.logo-img');
+  const logoImgs = document.querySelectorAll('.site-header .logo-img');
 
   const STORAGE_KEY = 'ehs-theme-customization';
   const LOGO_STORAGE_KEY = 'ehs-logo-customization';
-  const DEFAULT_LOGO = 'media/logos/logo-light-v.png';
+  const DEFAULT_LOGO = 'media/logos/logo-dark-v.png';
 
   const defaults = {
     '--navy': '#0A2342',
@@ -18,11 +18,11 @@
     '--bg': '#F6F8FA',
     '--hero-bg': '#0A2342',
     '--text': '#101820',
-    '--header-bg': '#0A2342',
+    '--header-bg': '#FFFFFF',
     '--section-alt-bg': '#EEF2F6',
     '--trust-bg': '#0A2342',
     '--footer-bg': '#08192f',
-    '--header-text': '#FFFFFF',
+    '--header-text': '#101820',
     '--hero-text': '#FFFFFF',
     '--section-a-text': '#0A2342',
     '--section-b-text': '#0A2342',
